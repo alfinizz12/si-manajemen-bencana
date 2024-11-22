@@ -11,10 +11,12 @@
     <title>Home</title>
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg" style="background-color:#ABBA7C;">
-        <div class="container-fluid " style="color:#3D5300; font-weight:bold">
-            <a class="navbar-brand" href="home.php" style="color:#3D5300;">SIGEMBI</a>
+
+
+<body class="parkinsans-body">
+    <nav class="navbar navbar-expand-lg" style="background-color:#4A4947; ">
+        <div class="container-fluid " style="color:#FAF7F0; font-weight:bold;">
+            <a class="navbar-brand" href="home.php" style="color:#FAF7F0">SIGEMBI</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -28,12 +30,12 @@
                             Tentang Gempa
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="apaItuGempa.php">Apa Itu Gempa?</a></li>
-                            <li><a class="dropdown-item" href="penyebab.php">Penyebab Gempa</a></li>
-                            <li><a class="dropdown-item" href="mitigasi.php">Mitigasi</a></li>
-                            <li><a class="dropdown-item" href="dampak.php">Dampak</a></li>
-                            <li><a class="dropdown-item" href="penanggulangan.php">Penanggulangan</a></li>
-                            <li><a class="dropdown-item" href="simulasi.php">Simulasi</a></li>
+                            <li><a class="dropdown-item" style="color:#FAF7F0" href="apaItuGempa.php">Apa Itu Gempa?</a></li>
+                            <li><a class="dropdown-item" style="color:#FAF7F0" href="penyebab.php">Penyebab Gempa</a></li>
+                            <li><a class="dropdown-item" style="color:#FAF7F0" href="mitigasi.php">Mitigasi</a></li>
+                            <li><a class="dropdown-item" style="color:#FAF7F0" href="dampak.php">Dampak</a></li>
+                            <li><a class="dropdown-item" style="color:#FAF7F0" href="penanggulangan.php">Penanggulangan</a></li>
+                            <li><a class="dropdown-item" style="color:#FAF7F0" href="simulasi.php">Simulasi</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -74,7 +76,7 @@
 
                         </div>
                     </div>
-                    <img src="assets/image 11 (1).svg" class="mt-4 img-fluid top-50 position-absolute translate-middle" alt="gempa" width="500px" style="z-index: 10; left:1000px; bottom:150px">
+                    <!-- <img src="assets/image 11 (1).svg" class="mt-4 img-fluid top-50 position-absolute translate-middle" alt="gempa" width="500px" style="z-index: 10; left:1000px; bottom:150px"> -->
                 </div>
             </div>
         </div>
