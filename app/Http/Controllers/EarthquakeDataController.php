@@ -6,12 +6,28 @@ use Illuminate\Http\Request;
 use App\Models\EarthquakeData;
 use App\Http\Requests\EarthquakeDataStoreRequest;
 use App\Http\Requests\EarthquakeDataUpdateRequest;
+use App\Services\EarthquakeDataApiService;
 
 class EarthquakeDataController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
+    protected $apiData;
+    protected function __construct(EarthquakeDataApiService $data){
+        $this->apiData = $data;
+    }
+
+    public function earthquakeData(){
+        $data = $this->apiData->getData();
+
+        if (isset($data['error']) && $data['error']) {
+            return view('dataStatistik', ['error' => $data['message']]);
+        }
+
+        return view('dataStatistik', ['data' => $data['Infogempa']['gempa']]);
+    }
+
     public function index()
     {
         //

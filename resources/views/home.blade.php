@@ -7,47 +7,12 @@
     @vite(['resources/css/style.css', 'resources/js/app.js'])
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <title>Home</title>
 </head>
 
-
-
-<body class="parkinsans-body">
-    <nav class="navbar navbar-expand-lg" style="background-color:#4A4947; ">
-        <div class="container-fluid " style="color:#FAF7F0; font-weight:bold;">
-            <a class="navbar-brand" href="home.php" style="color:#FAF7F0">SIGEMBI</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Beranda</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="/about-earthquake" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Tentang Gempa
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" style="color:#FAF7F0" href="apaItuGempa.php">Apa Itu Gempa?</a></li>
-                            <li><a class="dropdown-item" style="color:#FAF7F0" href="penyebab.php">Penyebab Gempa</a></li>
-                            <li><a class="dropdown-item" style="color:#FAF7F0" href="mitigasi.php">Mitigasi</a></li>
-                            <li><a class="dropdown-item" style="color:#FAF7F0" href="dampak.php">Dampak</a></li>
-                            <li><a class="dropdown-item" style="color:#FAF7F0" href="penanggulangan.php">Penanggulangan</a></li>
-                            <li><a class="dropdown-item" style="color:#FAF7F0" href="simulasi.php">Simulasi</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/berita">Berita</a>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-
+<body>
+    <x-navbar></x-navbar>
     <section>
         <div class="upper container mt-2">
             <div class="row align-items-center">
@@ -292,8 +257,11 @@
         <div class="container">
             <div class="d-flex">
                 <img src="assets/wpf_statistics.svg" alt="" height="28">
-                <h4 class="ms-2 mb-2" style="color: #3D5300;">Statistik Korban dan Kerusakan Akibat Gempa Bumi Tahun 2024</h4>
+                <h4 class="ms-2 mb-2" style="color: #3D5300;">Statistik Jumlah Korban 5 Tahun Terakhir</h4>
             </div>
+            {!! $chartVictims->container() !!}
+            <div id="chart"></div>
+
         </div>
     </section>
 
@@ -337,6 +305,8 @@
     </script>
     <script src="{{ $chart->cdn() }}"></script>
     {{ $chart->script() }}
+    <script src="{{ $chartVictims->cdn() }}"></script>
+    {{ $chartVictims->script() }}
 </body>
 
 </html>
