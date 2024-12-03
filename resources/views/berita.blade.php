@@ -46,7 +46,7 @@
 
     <section class="berita">
         <div class="newsPage mb-5">
-            <div class="row" onclick="window.location.href='news1.blade.php'" style="cursor: pointer;">
+            <div class="row" onclick="window.location.href='/detailNews'" style="cursor: pointer;">
                 @foreach ($news->sortByDesc('id')->take(1) as $n)
                     <div class="col">
                         <img src="assets/image-2.svg" alt="" style="width: 500px;">
@@ -68,7 +68,7 @@
                 @foreach ($news as $n)
                     <div class="col-md-4 mb-4">
                         <div class="newsCard" style="cursor:pointer; border:none"
-                            onclick="window.location.href='news1.php'">
+                            onclick="window.location.href='/detailNews'">
                             <img src="assets/image.svg" class="card-img-top zoomIn" alt="...">
                             <div class="p-3">
                                 <p style="font-size: 12px;">{{ $n->date }} </p>
@@ -79,7 +79,7 @@
                                         $desc =
                                             count($words) > 20
                                                 ? implode(' ', array_slice($words, 0, 20)) .
-                                                    '... <a href="news1.php">Read More</a>'
+                                                    '... <a href="/detailNews">Read More</a>'
                                                 : $n->description;
                                     @endphp
                                     {!! $desc !!}
@@ -119,20 +119,15 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
     <script>
-        public
-
-        function news() {
-            $perPage = 6; // Items per page
-            $page = request() - > get('page', 1); // Get current page
+        public function news() {
+            $perPage = 6; 
+            $page = request() - > get('page', 1);
             $skip = ($page - 1) * $perPage;
 
-            // Fetch the data you want to paginate
             $news = News::skip($skip) - > take($perPage) - > get();
 
-            // Get the total number of records
             $total = News::count();
 
-            // Calculate total pages
             $totalPages = ceil($total / $perPage);
 
             return view('news.index', compact('news', 'totalPages', 'page'));

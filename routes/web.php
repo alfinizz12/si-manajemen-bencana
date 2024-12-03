@@ -11,19 +11,13 @@ use App\Http\Controllers\ProfileController;
 
 Route::get('/', [HomeController::class, 'home']);
 Route::get('/berita', [NewsController::class, 'newsPagination']);
+Route::get('/detailNews', [NewsController::class, 'detailNews']);
 Route::get('/about-earthquake', function(){
     return view('tentangGempa');
 });
-Route::get('/earthquake-explained', function(){
-    return view('apaItuGempa');
+Route::get('/statistic', function(){
+    return view('dataGempa');
 });
-Route::get('/earthquake-simulation', function(){
-    return view('simulasi');
-});
-Route::get('/earthquake-simulation', function(){
-    return view('dampak');
-});
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

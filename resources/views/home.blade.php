@@ -17,7 +17,6 @@
     <style>
         body {
             background-color: #FAF7F0;
-
         }
     </style>
 </head>
@@ -50,7 +49,7 @@
                 <div class="col ms-5">
                     <h2 class="mt-2">Berita Terbaru</h2>
                     @foreach ($news as $n)
-                        <div class="row mb-3" onclick="window.location.href='news1.blade.php'" style="cursor: pointer;">
+                        <div class="row mb-3" onclick="window.location.href='/detailNews'" style="cursor: pointer;">
                             <div class="col-4">
                                 <img src="assets/image-2.svg" alt="" style="width: 130px;">
                             </div>
@@ -71,10 +70,6 @@
     <section class="sectApaGempa">
         <div class="tentangGempa container mb-5">
             <div class="">
-                <!-- <div class="d-flex mt-4">
-                    <img src="assets/Vector.svg" alt="" height="28">
-                    <h3 class="ms-2 mb-2" style="color: #3D5300;">Tentang Gempa Bumi</h3>
-                </div> -->
                 <h5 style="font-size: 30px;" class="mt-3 text-center">Apa Itu Gempa Bumi?</h5>
                 <p class="text-center ms-5 me-5" style="font-size: 18px;">
                     Gempa bumi adalah getaran bumi yang terjadi akibat pelepasan energi di dalam bumi secara tiba-tiba
@@ -84,8 +79,6 @@
                     <br>
                     Pelajari lebih lanjut tentang gempa bumi!
                 </p><br>
-
-                <!-- <iframe width="500" height="320" src="https://www.youtube.com/embed/M_LMj9FJAGs?si=OPMVGbGNfvXc8moy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
 
                 <div class="bagianBtn">
                     <button class="btn btn-warning rounded-5 mt-1 mx-auto justify-content-center"
@@ -133,16 +126,18 @@
                         </button>
                         <div class="accordion-content">
                             <ol>
-                                <li>Mengenali lingkungan sekitar: 
-                                    Pelajari tempat tinggal atau tempat kerja untuk mengetahui lokasi paling aman untuk berlindung dan rute evakuasi.
+                                <li>Mengenali lingkungan sekitar:
+                                    Pelajari tempat tinggal atau tempat kerja untuk mengetahui lokasi paling aman untuk
+                                    berlindung dan rute evakuasi.
                                 </li>
-                                <li>Mengevaluasi bangunan: 
+                                <li>Mengevaluasi bangunan:
                                     Evaluasi dan renovasi struktur bangunan agar lebih tahan terhadap gempa bumi.
                                 </li>
-                                <li>Mengatur barang berat: 
-                                    Pastikan benda atau material berat ditempatkan di bagian bawah untuk mencegah risiko tertimpa saat gempa.
+                                <li>Mengatur barang berat:
+                                    Pastikan benda atau material berat ditempatkan di bagian bawah untuk mencegah risiko
+                                    tertimpa saat gempa.
                                 </li>
-                                <li>Menyiapkan tas siaga bencana: 
+                                <li>Menyiapkan tas siaga bencana:
                                     Siapkan tas yang berisi:
                                     <ul>
                                         <li>Makanan ringan (tidak mudah basi)</li>
@@ -159,7 +154,7 @@
                                 </li>
                             </ol>
                         </div>
-                        
+
                     </div><br>
                     <div class="accordion-item">
                         <button id="accordion-button-3" aria-expanded="false">
@@ -170,21 +165,28 @@
                         <div class="accordion-content">
                             <p>Langkah-langkah yang harus dilakukan saat terjadi gempa antara lain:</p>
                             <ol>
-                                <li>Melindungi kepala dengan menggunakan bantal atau helm, atau berdirilah di bawah pintu.</li>
-                                <li>Berlindung di bawah meja untuk menghindari benda-benda yang mungkin jatuh, seperti atap atau benda berbahaya lainnya.</li>
-                                <li>Jika keluar rumah, perhatikan kemungkinan pecahan kaca, genteng, atau material lain. Tetap lindungi kepala Anda dan segera menuju ke lapangan terbuka.</li>
-                                <li>Jangan berdiri di dekat tiang, pohon, sumber listrik, atau gedung yang mungkin roboh.</li>
-                                <li>Kemali bagian bangunan gedung atau rumah yang memiliki struktur kuat, seperti sudut bangunan, untuk berlindung.</li>
+                                <li>Melindungi kepala dengan menggunakan bantal atau helm, atau berdirilah di bawah
+                                    pintu.</li>
+                                <li>Berlindung di bawah meja untuk menghindari benda-benda yang mungkin jatuh, seperti
+                                    atap atau benda berbahaya lainnya.</li>
+                                <li>Jika keluar rumah, perhatikan kemungkinan pecahan kaca, genteng, atau material lain.
+                                    Tetap lindungi kepala Anda dan segera menuju ke lapangan terbuka.</li>
+                                <li>Jangan berdiri di dekat tiang, pohon, sumber listrik, atau gedung yang mungkin
+                                    roboh.</li>
+                                <li>Kemali bagian bangunan gedung atau rumah yang memiliki struktur kuat, seperti sudut
+                                    bangunan, untuk berlindung.</li>
                                 <li>Ikuti instruksi evakuasi dari pengelola, penjaga, atau petugas yang berwenang.</li>
-                                <li>Gunakan tangga darurat untuk melakukan evakuasi keluar bangunan. Apabila sedang berada di dalam elevator, tekan semua tombol atau gunakan interphone untuk memanggil pengelola gedung.</li>
+                                <li>Gunakan tangga darurat untuk melakukan evakuasi keluar bangunan. Apabila sedang
+                                    berada di dalam elevator, tekan semua tombol atau gunakan interphone untuk memanggil
+                                    pengelola gedung.</li>
                             </ol>
                         </div>
-                        
+
                     </div><br>
                     <div class="accordion-item">
                         <button id="accordion-button-4" aria-expanded="false">
                             <span class="accordion-title">Bagaimana saya mendapatkan info lebih rinci tentang ancaman
-                                bencana gempa bumi, terutama di wilayah saya tinggal?
+                                bencana gempa bumi, <br> terutama di wilayah saya tinggal?
                             </span>
                             <span class="icon" aria-hidden="true"></span>
                         </button>
@@ -200,7 +202,7 @@
                     <div class="accordion-item">
                         <button id="accordion-button-5" aria-expanded="false">
                             <span class="accordion-title">Di wilayah saya tinggal, daerah manakah yang aman terhadap
-                                ancaman bencana gempa bumi? Bisakah saya mengungsi di tempat aman itu bila terjadi gempa
+                                ancaman bencana gempa bumi? <br>Bisakah saya mengungsi di tempat aman itu bila terjadi gempa
                                 bumi?</span>
                             <span class="icon" aria-hidden="true"></span>
                         </button>
@@ -219,7 +221,7 @@
                         <button id="accordion-button-5" aria-expanded="false">
                             <span class="accordion-title">Berapa lamakah saya harus mengungsi bila terjadi gempa bumi?
                                 Berapa hari saya bisa kembali ke rumah tempat
-                                <br> saya tinggal? Bagaimana saya mengetahui bahwa rumah saya aman untuk ditempati
+                                 saya tinggal? Bagaimana saya mengetahui bahwa rumah saya aman untuk ditempati
                                 setelah kejadian bencana gempa bumi?</span>
                             <span class="icon" aria-hidden="true"></span>
                         </button>
@@ -320,7 +322,7 @@
                 @foreach ($news as $n)
                     <div class="col p-2">
                         <div class="cardNews" style=" cursor:pointer; border:none"
-                            onclick="window.location.href='news1.php'">
+                            onclick="window.location.href='/detailNews'">
                             <img src="assets/image.svg" class="card-img-top zoomIn" alt="...">
                             <div class="mt-3 p-3">
                                 <h5 class="newsTitle">{{ $n->title }}</h5>
@@ -339,7 +341,18 @@
         </div>
     </section>
 
-    <section class="riwayatGempa">
+    <section class="riwayatGempa2 mb-5">
+        <div class="container">
+            <div class="d-flex">
+                <img src="assets/openmoji_earthquake.svg" alt="" height="28">
+                <h4 class="ms-2 mb-2" style="color: #494949;">Persebaran dan Riwayat Gempa Bumi di Indonesia</h4>
+            </div>
+            <button class="bagianBtn btn btn-warning rounded-5 mt-1 mx-auto justify-content-center"
+                style="width: min-content;" onclick="window.location.href='/statistic'">Selengkapnya</button>
+        </div>
+    </section>
+
+    {{-- <section class="riwayatGempa">
         <div class="container">
             <div class="d-flex">
                 <img src="assets/openmoji_earthquake.svg" alt="" height="28">
@@ -359,7 +372,7 @@
             <div id="chart"></div>
 
         </div>
-    </section>
+    </section> --}}
 
     <x-footer />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

@@ -102,6 +102,10 @@ class NewsController extends Controller
         $news = News::all();
         return view('berita', compact('news'));
     }
+    public function detailNews(){
+        $news = News::all();
+        return view('detailNews', compact('news'));
+    }
 
     public function headNews(){
         $headNews = DB::table('news')->latest()->take(3)->get();
