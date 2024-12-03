@@ -107,4 +107,23 @@ class NewsController extends Controller
         $headNews = DB::table('news')->latest()->take(3)->get();
         return $headNews;
     }
+
+    public function newsPagination()
+{
+    $perPage = 5; // Items per page
+    $page = request()->get('page', 1); // Get current page
+    $skip = ($page - 1) * $perPage;
+
+    // Fetch the data you want to paginate
+    $news = News::skip($skip)->take($perPage)->get();
+
+    // Get the total number of records
+    $total = News::count();
+
+    // Calculate total pages
+    $totalPages = ceil($total / $perPage);
+
+    return view('berita', compact('news', 'totalPages', 'page'));
+}
+
 }

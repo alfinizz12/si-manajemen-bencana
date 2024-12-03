@@ -10,7 +10,7 @@ use App\Http\Controllers\ProfileController;
 // });
 
 Route::get('/', [HomeController::class, 'home']);
-Route::get('/berita', [NewsController::class, 'news']);
+Route::get('/berita', [NewsController::class, 'newsPagination']);
 Route::get('/about-earthquake', function(){
     return view('tentangGempa');
 });
@@ -19,6 +19,9 @@ Route::get('/earthquake-explained', function(){
 });
 Route::get('/earthquake-simulation', function(){
     return view('simulasi');
+});
+Route::get('/earthquake-simulation', function(){
+    return view('dampak');
 });
 
 Route::get('/dashboard', function () {

@@ -1,265 +1,372 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Parkinsans:wght@300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Parkinsans:wght@300..800&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap");
 
 * {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif !important;
+    margin: 0;
+    padding: 0;
+    font-family: "Rethink Sans", sans-serif !important;
 }
-
 
 ::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
-.parkinsans-heading {
-  font-family: "Parkinsans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600; /* Contoh nilai bobot */
-  font-style: normal;
+.navbar {
+    color: #faf7f0;
+
 }
-
-.parkinsans-body {
-  font-family: "Parkinsans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400; /* Bobot standar untuk teks */
-  font-style: normal;
-}
-
-
 body {
-  overflow-x: hidden;
-  /* background-image: url('../views/assets/bg1.jpg');
-  background-repeat: no-repeat;
-  background-size: contain;*/
+    overflow-x: hidden;
+}
+
+.homeBody {
+    background-image: url("../views/assets/crack-2.svg");
+    background-repeat: no-repeat;
+}
+
+.aboutBody {
+    background-image: url("../views/assets/bg3.svg");
+    background-repeat: no-repeat;
+    background-color: #FAF7F0;
+    /* backdrop-filter: blur(1px); */
+}
+
+.contentOfTentang{
+    margin: 55px;
+}
+
+.sectApaGempa {
+    top: 50px;
+    /* margin: 20px; */
+    background-color: #4a4947;
 }
 
 nav {
-  color: #FAF7F0;
+    box-shadow: 2px 4px 7px rgba(0, 0, 0, 0.3);
+}
+
+.active {
+    text-decoration: underline;
+    color: violet;
 }
 
 .upper {
-  margin-top: 50px;
-  margin: auto;
+    margin-top: 120px;
+}
+
+.upperBtn {
+    background-color: transparent;
+    border: 1px solid black;
+    padding: 8px;
+}
+.upperBtn:hover {
+    background-color: #4a4947;
+    border: 1px solid #4a4947;
+    padding: 8px;
+    color: #faf7f0;
+    transition: all 0.5s ease-in-out;
 }
 
 .upperTitle {
-  margin-top: 70px;
+    margin-top: 20px;
+}
+
+.miniLink {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
+.miniLink:hover {
+    text-decoration: underline;
+}
+
+.miniBox {
 }
 
 .upperImg {
-  z-index: 1;
-  position: absolute;
-  margin-left: 700px;
+    z-index: 1;
+    position: absolute;
+    margin-left: 700px;
 }
 
 .tentangGempa {
-  margin: auto;
-  margin-top: 150px;
+    margin: 20px;
+    margin-top: 190px;
+    padding: 30px;
+    color: whitesmoke;
+}
+
+.bagianBtn {
+    display: flex;
+    align-items: center;
 }
 
 .aBtn {
-  background-color: orange;
-  color: white;
-  height: 50px;
+    background-color: orange;
+    color: white;
+    height: 50px;
 }
 
 .containerFaq {
-  margin: 0 auto;
-  width: 100;
+    margin: 0 auto;
+    width: 100;
 }
 
 .accordion .accordion-item {
-  border: 1px solid #eec615;
-  border-radius: 25px;
-  padding: 5px 15px;
-  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+    padding: 5px 15px;
+    box-shadow: 2px 4px 7px rgba(0, 0, 0, 0.3);
 }
 
 .accordion-title {
-  width: 50%;
+    width: 50%;
 }
 
-/* .accordion .accordion-item button[aria-expanded='true'] {
-    border: 1px solid #03b5d2;
-  }
-   */
 .accordion button {
-  position: relative;
-  display: block;
-  text-align: left;
-  width: 100%;
-  padding: 1em 0;
-  color: black;
-  font-size: 1.15rem;
-  font-weight: 400;
-  border: none;
-  background: none;
-  outline: none;
+    position: relative;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 1em 0;
+    color: black;
+    font-size: 1.15rem;
+    font-weight: 400;
+    border: none;
+    background: none;
+    outline: none;
 }
 
 .accordion button:hover,
 .accordion button:focus {
-  cursor: pointer;
-  color: #eec615;
+    cursor: pointer;
+    color: #4a4947;
 }
 
 .accordion button:hover::after,
 .accordion button:focus::after {
-  cursor: pointer;
-  color: #eec615;
-  border: 1px solid #eec615;
+    cursor: pointer;
+    color: #4a4947;
+    border: 1px solid #4a4947;
 }
 
 .accordion button .accordion-title {
-  padding: 2em 3em 2em 0;
+    padding: 2em 3em 2em 0;
 }
 
 .accordion button .icon {
-  display: inline-block;
-  position: absolute;
-  top: 18px;
-  right: 0;
-  width: 22px;
-  height: 22px;
-  border: 1px solid;
-  border-radius: 22px;
+    display: inline-block;
+    position: absolute;
+    top: 18px;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    border: 1px solid;
+    border-radius: 22px;
 }
 
 .accordion button .icon::before {
-  display: block;
-  position: absolute;
-  content: '';
-  top: 9px;
-  left: 5px;
-  width: 10px;
-  height: 2px;
-  background: currentColor;
+    display: block;
+    position: absolute;
+    content: "";
+    top: 9px;
+    left: 5px;
+    width: 10px;
+    height: 2px;
+    background: currentColor;
 }
 
 .accordion button .icon::after {
-  display: block;
-  position: absolute;
-  content: '';
-  top: 5px;
-  left: 9px;
-  width: 2px;
-  height: 10px;
-  background: currentColor;
+    display: block;
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: 9px;
+    width: 2px;
+    height: 10px;
+    background: currentColor;
 }
 
-.accordion button[aria-expanded='true'] {
-  color: #eec615;
+.accordion button[aria-expanded="true"] {
+    color: #b17457;
 }
 
-.accordion button[aria-expanded='true'] .icon::after {
-  width: 0;
+.accordion button[aria-expanded="true"] .icon::after {
+    width: 0;
 }
 
-.accordion button[aria-expanded='true']+.accordion-content {
-  opacity: 1;
-  max-height: 50em;
-  transition: all 200ms linear;
-  will-change: opacity, max-height;
+.accordion button[aria-expanded="true"] + .accordion-content {
+    opacity: 1;
+    max-height: 50em;
+    transition: all 200ms linear;
+    will-change: opacity, max-height;
 }
 
 .accordion .accordion-content {
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: opacity 200ms linear, max-height 200ms linear;
-  will-change: opacity, max-height;
-  text-align: justify;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 200ms linear, max-height 200ms linear;
+    will-change: opacity, max-height;
+    text-align: justify;
 }
 
 .accordion .accordion-content p {
-  font-size: 1rem;
-  font-weight: 300;
-  margin: 2em 0;
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 2em 0;
 }
 
 .cardNews:hover .newsDesc {
-  color: #eec615;
+    color: black;
 }
 
-.cardNews{
-  height: 200px;
-  overflow: hidden;
+.cardNews {
+    box-shadow: 2px 4px 7px rgba(0, 0, 0, 0.3);
+    height: 450px;
+    width: 350px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.newsTitle:hover {
+    text-decoration: underline;
 }
 
 .zoomIn {
-  transition: transform 1s ease;
+    transition: transform 1s ease;
 }
 
 .zoomIn:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .footerCont {
-  background-color: #ABBA7C;
-  color: white;
+    background-color: #abba7c;
+    color: white;
 }
 
 .aboutContainer {
-  margin: auto;
-  width: 100%;
+    margin: auto;
+    width: 100%;
 }
 
 .wrapper {
-  margin: auto;
-  padding: 0;
-  max-width: fit-content;
-  height: 300px;
-  border: none;
-  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+    margin: auto;
+    padding: 0;
+    max-width: fit-content;
+    height: 300px;
+    border: none;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .image-box {
-  overflow: hidden;
-  width: 350px;
-  
-
+    overflow: hidden;
+    width: 350px;
 }
+
 .image-box img {
-  max-width: 100%;
-  transition: all 0.3s;
-  display: block;
-  width: 100%;
-  height: auto;
-  transform: scale(1);
+    max-width: 100%;
+    transition: all 0.3s;
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scale(1);
 }
 
 .image-box:hover img {
-  transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.titleTentang {
+    margin: 200px;
+    /* height: 70vh; */
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.arrow {
+    text-align: center;
+    margin: 8% 0;
+}
+.bounce {
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
 }
 
 @media (max-width: 576px) {
-  h2 {
-    font-size: 1.5rem;
-  }
+    h2 {
+        font-size: 1.5rem;
+    }
 
-  h4 {
-    font-size: 1.125rem;
-  }
+    h4 {
+        font-size: 1.125rem;
+    }
 }
 
 @media (min-width: 768px) {
-  h2 {
-    font-size: 2rem;
-  }
+    h2 {
+        font-size: 2rem;
+    }
 
-  h4 {
-    font-size: 1.5rem;
-  }
+    h4 {
+        font-size: 1.5rem;
+    }
 }
 
 @media (min-width: 992px) {
-  h2 {
-    font-size: 2.5rem;
-  }
+    h2 {
+        font-size: 2.5rem;
+    }
 
-  h4 {
-    font-size: 1.75rem;
-  }
+    h4 {
+        font-size: 1.75rem;
+    }
 }
+
+
+
+
+/* Custom Pagination Styles */
+.custom-pagination .pagination {
+    height: 100px;
+    font-size: 0.75rem;
+    padding: 0.5rem;
+}
+
+.custom-pagination .page-link {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+}
+
+.custom-pagination .page-item {
+    margin-right: 0.25rem;
+}
+.custom-pagination .page-link {
+font-size: 0.6rem; /* Smaller font size for links */
+}
+
+.custom-pagination .page-link i {
+font-size: 1rem; /* Adjust the icon size */
+}
+
+
